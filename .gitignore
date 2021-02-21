@@ -4,3 +4,6 @@
 .classpath
 /.settings
 /src/main/resources/firebase-server-config.json
+.idea
+*.iml
+package-lock.json
