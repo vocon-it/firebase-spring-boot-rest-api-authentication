@@ -12,6 +12,15 @@ NEXT_PUBLIC_PROJECT_ID=REPLACE_WITH_PROJECT_ID
 NEXT_PUBLIC_APP_ID=REPLACE_WITH_APP_ID
 NEXT_PUBLIC_MIDDLEWARE_URL=REPLACE_WITH_SPRING_BOOT_URL
 ```
+e.g. retrieve the Web API Keay from the [firebase project settings page](https://console.firebase.google.com/u/1/project/vocon-intellij-frontend/settings/general/web:M2I5MjFmZDEtNmNjZS00M2FhLWI5YTMtNjQ1M2Y5N2RkNGY3)
+```shell
+NEXT_PUBLIC_API_KEY=AI...
+NEXT_PUBLIC_AUTH_DOMAIN=vocon-intellij-frontend.firebaseapp.com
+NEXT_PUBLIC_DB_URL=https://vocon-intellij-frontend.firebaseio.com
+NEXT_PUBLIC_PROJECT_ID=vocon-intellij-frontend
+NEXT_PUBLIC_APP_ID=1:868209311085:web:81e3a24dc90deffeaf6e64
+NEXT_PUBLIC_MIDDLEWARE_URL=localhost:8090
+```
 
 First, install the dependencies:
 

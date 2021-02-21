@@ -138,6 +138,8 @@ You have accessed seller only data from spring boot
 > The reason is that roles are preceded with uppercase ROLE_ prefix, therefore
 > lowercase roles will not easily work. See [this stackoverflow question and its answer](https://stackoverflow.com/questions/33205236/spring-security-added-prefix-role-to-all-roles-name) for more information.
 >
+## UI Demo
+See `ui-client-side-session-demo/README.md`.
 
 ### Configuration
 
