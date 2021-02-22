@@ -1,5 +1,9 @@
 server:
    port: 8090
+developer-cloud-desktop:
+   url: ${DEVELOPERS_CLOUD_DESKTOP_URL}
+   port: ${DEVELOPERS_CLOUD_DESKTOP_PORT}
+   password: ${DEVELOPERS_CLOUD_DESKTOP_PASSWORD}
 security:
    firebase-props:
       database-url: ${FIREBASE_DATABASE}
@@ -16,6 +20,8 @@ security:
    allow-credentials: true
    allowed-origins:
    - https://${CORS_DOMAIN}
+   - http://localhost:4200
+   - http://localhost:8080
    - http://localhost:3000
    allowed-methods:
    - GET

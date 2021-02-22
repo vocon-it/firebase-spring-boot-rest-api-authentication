@@ -141,6 +141,48 @@ You have accessed seller only data from spring boot
 ## UI Demo
 See `ui-client-side-session-demo/README.md`.
 
+## Developers Cloud Desktop
+
+Implemented in feature/CAAS-451-intellij-frontend-integration-with-spring-boot-backend:
+- Controller: public/developersCloudDesktop
+- Response: static JSON with url, port and password
+
+### Backend configuration
+
+For running the application and tests in IntelliJ, use the following content in
+1. IntelliJ -> Run -> Edit configurations... -> Application --> ApiServiceApplicaton -> Environment variables
+2. IntelliJ -> Run -> Edit configurations... -> JUnit --> ApiServiceApplicatonTests -> Environment variables
+
+```shell
+DEVELOPERS_CLOUD_DESKTOP_URL=intellijdesktop2.vocon-it.com;DEVELOPERS_CLOUD_DESKTOP_PORT=80;DEVELOPERS_CLOUD_DESKTOP_PASSWORD=changeme;SUPER_ADMINS=oliver.veits@vocon-it.com;ENABLE_SERVER_SESSION=false;GOOGLE_APPLICATION_CREDENTIALS=src/main/resources/firebase-server-config.json;FIREBASE_DATABASE=https://vocon-intellij-frontend.firebaseio.com;CORS_DOMAIN=intellij-frontend.vocon-it.com
+```
+
+### Client Test via curl:
+
+```shell
+curl -v localhost:8090/public/developersCloudDesktop -H "Origin: http://localhost:8080"
+
+# output:
+{"url":"intellijdesktop2.vocon-it.com","port":"80","password":"changeme"}
+```
+### Angular Client
+
+GIT Project Info:
+```shell
+$ git remote -v
+origin  git@bitbucket.org:vocon-IT/intellij-frontend.git (fetch)
+origin  git@bitbucket.org:vocon-IT/intellij-frontend.git (push)
+```
+
+Start the server locally:
+```shell
+ng serve
+```
+Then connect via a browser to http://localhost:4200
+
+Debugging: see [this blog post](https://vocon-it.com/2021/02/17/debugging-angular-with-visual-studio-code/).
+
+
 ### Configuration
 
 - Be sure to add the following environment variable globally or project specific run configuration environment variable `GOOGLE_APPLICATION_CREDENTIALS=path_to_firebase_server_config.json`
