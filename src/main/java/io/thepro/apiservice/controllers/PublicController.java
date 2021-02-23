@@ -14,13 +14,13 @@ import java.util.Map;
 @RequestMapping("public")
 public class PublicController {
 
-	@Value("${developer-cloud-desktop.url}")
+	@Value("${developers-cloud-desktop.url}")
 	String url;
 
-	@Value("${developer-cloud-desktop.port}")
+	@Value("${developers-cloud-desktop.port}")
 	String port;
 
-	@Value("${developer-cloud-desktop.password}")
+	@Value("${developers-cloud-desktop.password}")
 	String password;
 
 	@GetMapping("data")

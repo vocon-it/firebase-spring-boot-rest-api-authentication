@@ -1,6 +1,6 @@
 server:
    port: 8090
-developer-cloud-desktop:
+developers-cloud-desktop:
    url: ${DEVELOPERS_CLOUD_DESKTOP_URL}
    port: ${DEVELOPERS_CLOUD_DESKTOP_PORT}
    password: ${DEVELOPERS_CLOUD_DESKTOP_PASSWORD}
